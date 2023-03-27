@@ -12,7 +12,7 @@ const fetcher = async (url, token) => {
 };
 
 const worker = async (url, isWriteHeader) => {
-  console.log("fetching data from: ", url);
+  console.log("Fetching data from:", url);
   const data = await fetcher(url, process.env.ACCESS_TOKEN);
   const columnHeaders = data.columnHeaders.map((item) => item.name);
   const nextLink = data.nextLink;
