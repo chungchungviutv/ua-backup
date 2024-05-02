@@ -9,6 +9,10 @@
     "axios": "^1.3.4",
     "dotenv": "^16.0.3"
   },
+  "scripts": {
+    "prepare:app_env": "cp .env.example .env",
+    "build": "rm -rf ./result.csv && yarn prepare:app_env && node index.js "
+  },
   "devDependencies": {
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
