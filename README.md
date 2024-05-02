@@ -5,9 +5,11 @@ A script to backup Google Universal Analytics data to a CSV file.
 ## Installation
 
 ```bash
-# replace env values described in below in .env.example
+# env values described in below
+cp .env.example .env
+
 yarn
-yarn build
+yarn run
 ```
 
 ### `ACCESS_TOKEN`

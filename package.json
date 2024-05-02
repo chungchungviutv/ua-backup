@@ -10,8 +10,7 @@
     "dotenv": "^16.0.3"
   },
   "scripts": {
-    "prepare:app_env": "cp .env.example .env",
-    "build": "rm -rf ./result.csv && yarn prepare:app_env && node index.js "
+    "run": "rm -rf ./result.csv && node index.js"
   },
   "devDependencies": {
     "husky": "^8.0.3",
