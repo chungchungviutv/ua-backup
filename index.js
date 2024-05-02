@@ -18,7 +18,7 @@ const worker = async (url, isWriteHeader) => {
   const nextLink = data.nextLink;
 
   if (isWriteHeader) {
-    fs.appendFile(
+    fs.appendFileSync(
       "result.csv",
       columnHeaders.join(", ") + "\n",
       function (err) {
@@ -28,7 +28,7 @@ const worker = async (url, isWriteHeader) => {
   }
 
   data.rows.forEach((row) => {
-    fs.appendFile("result.csv", row.join(", ") + "\n", function (err) {
+    fs.appendFileSync("result.csv", row.join(", ") + "\n", function (err) {
       if (err) throw err;
     });
   });
